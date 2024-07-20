@@ -9,7 +9,7 @@ interface ProjectProps {
   description: string;
   linkHref: string;
 }
-const Project = ({ imageSrc, title, description, linkHref}) => {
+const Project:React.FC<ProjectProps> = ({ imageSrc, title, description, linkHref}) => {
 
 
   return (
