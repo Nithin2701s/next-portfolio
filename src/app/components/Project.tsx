@@ -1,9 +1,17 @@
 // components/Project.js
-
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+interface ProjectProps {
+  imageSrc: string;
+  title: string;
+  description: string;
+  linkHref: string;
+}
 const Project = ({ imageSrc, title, description, linkHref}) => {
+
+
   return (
     <div className=" Project-card min-w-[20rem] bg-black shadow-lg m-4">
         <div className="relative w-full h-[15rem]"> {/* Adjust the height as needed */}
