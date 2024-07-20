@@ -4,12 +4,12 @@ import '../style.css'
 import ScrollReveal from 'scrollreveal';
 const Contact = () => {
     useEffect(()=>{
-      !(typeof window == undefined) && ScrollReveal().reveal('.contact',{
+      if(typeof window !== undefined){ScrollReveal().reveal('.contact',{
             origin:"left",
             distance:"120px",
             duration:2000,
             delay:200
-        })
+        })}
         return () =>ScrollReveal().destroy();
     },[])
     return(

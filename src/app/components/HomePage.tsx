@@ -13,13 +13,13 @@ const TypedText = dynamic(() => import('./TypedText'), {
 const HomePage = () => {  
      useEffect(() => {
           // Initialize ScrollReveal
-          !(typeof window == undefined) &&  ScrollReveal().reveal('.home-content', {
+          (typeof window !== undefined) &&  ScrollReveal().reveal('.home-content', {
                origin : "right",
                distance : "150px" ,
                duration : 3000,
                delay : 200
           });
-          !(typeof window == undefined) && ScrollReveal().reveal('.home-img',{
+          (typeof window !== undefined) && ScrollReveal().reveal('.home-img',{
           origin :"bottom",
           distance : "80px",
           duration:2000,

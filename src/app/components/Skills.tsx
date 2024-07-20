@@ -5,7 +5,8 @@ import ScrollReveal from "scrollreveal";
 
 const Skills = () => {
     useEffect(()=>{
-      !(typeof window == undefined) &&  ScrollReveal().reveal('.images',{
+      if(typeof window !== undefined){
+      ScrollReveal().reveal('.images',{
           rotate: {
             x:0,
             y:0,
@@ -15,11 +16,12 @@ const Skills = () => {
           duration:2000,
           delay:200  
         })
-        !(typeof window == undefined) &&  ScrollReveal().reveal('.sk-title',{
+      }
+        if(typeof window !== undefined){ ScrollReveal().reveal('.sk-title',{
           scale:0.7,
           duration:2000,
           delay:200
-        })
+        })}
         return () =>ScrollReveal().destroy();
     },[])
     return(

@@ -5,19 +5,19 @@ import ScrollReveal from "scrollreveal"
 const About = () => {
      useEffect(()=>{
        // Initialize ScrollReveal
-     !(typeof window == undefined) && ScrollReveal().reveal('.about-img',{
+     if(typeof window !== undefined) {ScrollReveal().reveal('.about-img',{
         origin:'left',
         distance:"80px",
         duration:3000,
         delay:200 
 
-      })
-      !(typeof window == undefined) && ScrollReveal().reveal('.about-content',{
+      })}
+      if(typeof window !== undefined){ ScrollReveal().reveal('.about-content',{
         origin:'right',
         distance:"80px",
         duration:3000,
         delay:200 
-      })
+      })}
       return () =>ScrollReveal().destroy();
      },[])
     return(
