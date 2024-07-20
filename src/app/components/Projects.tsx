@@ -10,7 +10,8 @@ const Projects = ()=>{
         duration:2000,
         delay:200
      })
-    })
+     return ()=> ScrollReveal().destroy()
+    },[])
     return (
      <section className="projects-container justify-between item-center bg-[#123846] text-center" id="projects">
       <h2 className="text-[2.5rem] font-[700]">Latest <span className="text-[#78b6e6]">Projects</span></h2>
