@@ -4,13 +4,13 @@ import '../style.css'
 import ScrollReveal from 'scrollreveal';
 const Contact = () => {
     useEffect(()=>{
-        ScrollReveal().reveal('.contact',{
+      !(typeof window == undefined) && ScrollReveal().reveal('.contact',{
             origin:"left",
             distance:"120px",
             duration:2000,
             delay:200
         })
-        return () => ScrollReveal().destroy();
+        return () => !(typeof window == undefined) && ScrollReveal().destroy();
     },[])
     return(
         <section className="contact" id="contact">

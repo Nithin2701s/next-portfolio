@@ -4,7 +4,7 @@ import Project from "./Project"
 import ScrollReveal from "scrollreveal"
 const Projects = ()=>{
     useEffect(()=>{
-     ScrollReveal().reveal('.projects',{
+      !(typeof window == undefined) && ScrollReveal().reveal('.projects',{
         origin:"bottom",
         distance:'80px',
         duration:2000,

@@ -5,7 +5,7 @@ import ScrollReveal from "scrollreveal";
 
 const Skills = () => {
     useEffect(()=>{
-        ScrollReveal().reveal('.images',{
+      !(typeof window == undefined) &&  ScrollReveal().reveal('.images',{
           rotate: {
             x:0,
             y:0,
@@ -15,12 +15,12 @@ const Skills = () => {
           duration:2000,
           delay:200  
         })
-        ScrollReveal().reveal('.sk-title',{
+        !(typeof window == undefined) &&  ScrollReveal().reveal('.sk-title',{
           scale:0.7,
           duration:2000,
           delay:200
         })
-        return () => ScrollReveal().destroy();
+        return () => !(typeof window == undefined) && ScrollReveal().destroy();
     },[])
     return(
         <section className="services" id="services">

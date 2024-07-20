@@ -13,20 +13,20 @@ const TypedText = dynamic(() => import('./TypedText'), {
 const HomePage = () => {  
      useEffect(() => {
           // Initialize ScrollReveal
-          ScrollReveal().reveal('.home-content', {
+          !(typeof window == undefined) &&  ScrollReveal().reveal('.home-content', {
                origin : "right",
                distance : "150px" ,
                duration : 3000,
                delay : 200
           });
-         ScrollReveal().reveal('.home-img',{
+          !(typeof window == undefined) && ScrollReveal().reveal('.home-img',{
           origin :"bottom",
           distance : "80px",
           duration:2000,
           delay : 200
          })
           // Clean up
-          return () => ScrollReveal().destroy();
+          return () => !(typeof window == undefined) && ScrollReveal().destroy();
         }, []);
      return (
      <section className="home flex justify-center" id="home">
