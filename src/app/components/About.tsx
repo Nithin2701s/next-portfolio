@@ -5,23 +5,23 @@ import ScrollReveal from "scrollreveal"
 const About = () => {
      useEffect(()=>{
        // Initialize ScrollReveal
-     if(typeof window !== undefined) {ScrollReveal().reveal('.about-img',{
-        origin:'left',
-        distance:"80px",
-        duration:3000,
-        delay:200 
+    //  if(typeof window !== undefined) {ScrollReveal().reveal('.about-img',{
+    //     origin:'left',
+    //     distance:"80px",
+    //     duration:3000,
+    //     delay:200 
 
-      })}
-      if(typeof window !== undefined){ ScrollReveal().reveal('.about-content',{
-        origin:'right',
-        distance:"80px",
-        duration:3000,
-        delay:200 
-      })}
-      return () =>{
-        if(typeof window !== undefined){
-        ScrollReveal().destroy();}
-      }
+    //   })}
+    //   if(typeof window !== undefined){ ScrollReveal().reveal('.about-content',{
+    //     origin:'right',
+    //     distance:"80px",
+    //     duration:3000,
+    //     delay:200 
+    //   })}
+    //   return () =>{
+    //     if(typeof window !== undefined){
+    //     ScrollReveal().destroy();}
+    //   }
      },[])
     return(
         <section className="about flex justify-center item-center space-x-[2rem] space-y-[1rem] bg-[#123846]" id="about">

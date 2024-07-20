@@ -4,16 +4,16 @@ import Project from "./Project"
 import ScrollReveal from "scrollreveal"
 const Projects = ()=>{
     useEffect(()=>{
-      if(typeof window !== undefined){ ScrollReveal().reveal('.projects',{
-        origin:"bottom",
-        distance:'80px',
-        duration:2000,
-        delay:200
-     })}
-     return () =>{
-      if(typeof window !== undefined){
-      ScrollReveal().destroy();}
-    }
+    //   if(typeof window !== undefined){ ScrollReveal().reveal('.projects',{
+    //     origin:"bottom",
+    //     distance:'80px',
+    //     duration:2000,
+    //     delay:200
+    //  })}
+    //  return () =>{
+    //   if(typeof window !== undefined){
+    //   ScrollReveal().destroy();}
+    // }
     },[])
     return (
      <section className="projects-container justify-between item-center bg-[#123846] text-center" id="projects">

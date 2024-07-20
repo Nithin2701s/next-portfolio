@@ -5,27 +5,27 @@ import ScrollReveal from "scrollreveal";
 
 const Skills = () => {
     useEffect(()=>{
-      if(typeof window !== undefined){
-      ScrollReveal().reveal('.images',{
-          rotate: {
-            x:0,
-            y:0,
-            z:90
-          },
-          scale:0.5,
-          duration:2000,
-          delay:200  
-        })
-      }
-        if(typeof window !== undefined){ ScrollReveal().reveal('.sk-title',{
-          scale:0.7,
-          duration:2000,
-          delay:200
-        })}
-        return () =>{
-          if(typeof window !== undefined){
-          ScrollReveal().destroy();}
-        }
+      // if(typeof window !== undefined){
+      // ScrollReveal().reveal('.images',{
+      //     rotate: {
+      //       x:0,
+      //       y:0,
+      //       z:90
+      //     },
+      //     scale:0.5,
+      //     duration:2000,
+      //     delay:200  
+      //   })
+      // }
+      //   if(typeof window !== undefined){ ScrollReveal().reveal('.sk-title',{
+      //     scale:0.7,
+      //     duration:2000,
+      //     delay:200
+      //   })}
+      //   return () =>{
+      //     if(typeof window !== undefined){
+      //     ScrollReveal().destroy();}
+      //   }
     },[])
     return(
         <section className="services" id="services">
