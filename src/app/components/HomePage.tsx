@@ -31,7 +31,7 @@ const HomePage = () => {
        <div className="home-content mt-[2rem]">
        <h3 className='text-[2.2rem] font-[700] mb-2'>Hi, Myself</h3>
         <h1 className='ml-[2rem] text-[3rem] font-[700] leading-[1]'>Nithin Sai Charugundla</h1>
-        <h3 className='ml-[3rem] text-[2.2rem] font-[700]'>And I'm a <TypedText/></h3>
+        <h3 className='ml-[3rem] text-[2.2rem] font-[700]'>And I&apos;m a <TypedText/></h3>
         <p className='ml-[3.5rem]'>
           Undergraduate at IIIT Sricity pursuing degree in Computer Science and
           Engineering.
