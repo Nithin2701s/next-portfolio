@@ -25,7 +25,7 @@ const Contact = () => {
             <input type="number" name="number" placeholder="Mobile Number"></input>
             <input type="text" name="subject" placeholder="Email Subject"></input>
           </div>
-          <textarea name="" id="" cols="15" rows="8" placeholder="Your Message"></textarea>
+          <textarea name="" id="" cols=15 rows=8 placeholder="Your Message"></textarea>
           <input type="submit" className="btn hover:shadow-none" value="Send"></input>
         </form>
        </section>
