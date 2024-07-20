@@ -4,6 +4,7 @@ import '../style.css'
 import TypedText from './TypedText';
 import { useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
+import Link from 'next/link';
 
 const HomePage = () => {  
      useEffect(() => {
@@ -37,12 +38,12 @@ const HomePage = () => {
           Engineering.
         </p>
         <div className="social-media ml-[3.8rem] my-[1rem] space-x-5">
-          <a href="https://github.com/Nithin2701s" className='media'><i className="fa-brands fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/nithin-sai-charugundla-927640233" className='media'><i className="fa-brands fa-linkedin"></i></a>
-          <a href="https://x.com/Itz__Nithin" className='media'><i className="fa-brands fa-x-twitter"></i></a>
-          <a href="https://www.instagram.com/nithin__cns" className='media'><i className="fa-brands fa-instagram"></i></a>
+          <Link href="https://github.com/Nithin2701s" className='media'><i className="fa-brands fa-github"></i></Link>
+          <Link href="https://www.linkedin.com/in/nithin-sai-charugundla-927640233" className='media'><i className="fa-brands fa-linkedin"></i></Link>
+          <Link href="https://x.com/Itz__Nithin" className='media'><i className="fa-brands fa-x-twitter"></i></Link>
+          <Link href="https://www.instagram.com/nithin__cns" className='media'><i className="fa-brands fa-instagram"></i></Link>
         </div>
-          <a href="https://drive.google.com/file/d/1H1IR5LTM-tfgikggViBHeKP9F2ttjw2C/view?usp=drive_link" className="btn ml-[4rem] my-[1rem] hover:shadow-none">Download CV</a>
+          <Link href="https://drive.google.com/file/d/1H1IR5LTM-tfgikggViBHeKP9F2ttjw2C/view?usp=drive_link" className="btn ml-[4rem] my-[1rem] hover:shadow-none">Download CV</Link>
        
       </div>
     
