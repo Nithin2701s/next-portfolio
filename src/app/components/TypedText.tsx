@@ -18,8 +18,9 @@ const TypedText = () => {
     });
 
     return () => {
-      // Destroy Typed instance during cleanup to stop animation
-      typedInstance.current.destroy();
+      if (typedInstance.current) {
+        typedInstance.current.destroy();
+    }
     };
   }, []);
 
