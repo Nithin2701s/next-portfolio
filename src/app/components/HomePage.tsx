@@ -26,7 +26,7 @@ const HomePage = () => {
           delay : 200
          })
           // Clean up
-          return () => !(typeof window == undefined) && ScrollReveal().destroy();
+          return () =>ScrollReveal().destroy();
         }, []);
      return (
      <section className="home flex justify-center" id="home">

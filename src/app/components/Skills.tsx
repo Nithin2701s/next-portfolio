@@ -20,7 +20,7 @@ const Skills = () => {
           duration:2000,
           delay:200
         })
-        return () => !(typeof window == undefined) && ScrollReveal().destroy();
+        return () =>ScrollReveal().destroy();
     },[])
     return(
         <section className="services" id="services">

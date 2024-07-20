@@ -18,7 +18,7 @@ const About = () => {
         duration:3000,
         delay:200 
       })
-      return () => !(typeof window == undefined) && ScrollReveal().destroy();
+      return () =>ScrollReveal().destroy();
      },[])
     return(
         <section className="about flex justify-center item-center space-x-[2rem] space-y-[1rem] bg-[#123846]" id="about">
