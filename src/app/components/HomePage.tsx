@@ -1,11 +1,15 @@
 "use client"
 import Image from 'next/image';
 import '../style.css'
-import TypedText from './TypedText';
+// import TypedText from './TypedText';
 import { useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 
+const TypedText = dynamic(() => import('./TypedText'), {
+    ssr: false
+});
 const HomePage = () => {  
      useEffect(() => {
           // Initialize ScrollReveal
