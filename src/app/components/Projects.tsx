@@ -10,7 +10,10 @@ const Projects = ()=>{
         duration:2000,
         delay:200
      })}
-     return ()=> ScrollReveal().destroy()
+     return () =>{
+      if(typeof window !== undefined){
+      ScrollReveal().destroy();}
+    }
     },[])
     return (
      <section className="projects-container justify-between item-center bg-[#123846] text-center" id="projects">
