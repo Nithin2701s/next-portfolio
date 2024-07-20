@@ -1,11 +1,11 @@
 // components/TypedText.js
 "use client";
-import { useEffect, useRef } from 'react';
+import React,{ useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 
 const TypedText = () => {
-  const typedElement = useRef(null);
-  const typedInstance = useRef(null);
+  const typedElement = useRef<HTMLSpanElement | null>(null);
+  const typedInstance = useRef<Typed | null>(null);
 
   useEffect(() => {
     typedInstance.current = new Typed(typedElement.current, {
