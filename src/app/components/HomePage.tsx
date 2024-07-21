@@ -16,13 +16,17 @@ const HomePage:React.FC = () => {
       async function animate() {
         if (refToComponent1.current) {
           const sr = (await import("scrollreveal")).default
+          
           sr().reveal(refToComponent1.current,{
             origin:"bottom",
             distance:"80px",
             duration:2000,
             delay:200
           })
-          sr().reveal(refToComponent2.current,{
+        }
+          if(refToComponent2.current){
+          const sr2 = (await import("scrollreveal")).default
+          sr2().reveal(refToComponent2.current,{
             origin:"right",
             distance:"80px",
             duration:2000,
