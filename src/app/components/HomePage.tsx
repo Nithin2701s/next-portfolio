@@ -9,13 +9,20 @@ const TypedText = dynamic(() => import('./TypedText'), {
     ssr: false
 });
 const HomePage:React.FC = () => {  
-  const refToComponent = React.useRef(null)
+  const refToComponent1 = React.useRef(null)
+  const refToComponent2 = React.useRef(null)
      useEffect(() => {
 
       async function animate() {
-        if (refToComponent.current) {
+        if (refToComponent1.current) {
           const sr = (await import("scrollreveal")).default
-          sr().reveal(refToComponent.current,{
+          sr().reveal(refToComponent1.current,{
+            origin:"bottom",
+            distance:"80px",
+            duration:2000,
+            delay:200
+          })
+          sr().reveal(refToComponent2.current,{
             origin:"right",
             distance:"80px",
             duration:2000,
@@ -50,10 +57,10 @@ const HomePage:React.FC = () => {
         }, []);
      return (
      <section className="home flex justify-center" id="home">
-       <div className="home-img" ref={refToComponent}>   
+       <div className="home-img" ref={refToComponent1}>   
        <Image src = '/Images/DP.jpg' alt='' width={400} height={80} className='DP opacity-[0.8]'></Image>  
        </div> 
-       <div className="home-content mt-[2rem]">
+       <div className="home-content mt-[2rem]" ref={refToComponent2}>
        <h3 className='text-[2.2rem] font-[700] mb-2'>Hi, Myself</h3>
         <h1 className='ml-[2rem] text-[3rem] font-[700] leading-[1]'>Nithin Sai Charugundla</h1>
         <h3 className='ml-[3rem] text-[2.2rem] font-[700]'>And I&apos;m a <TypedText/></h3>
