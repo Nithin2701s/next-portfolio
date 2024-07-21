@@ -24,7 +24,9 @@ section {
     font-family: 'Lora' , sans-serif ;
     transition: 200ms ease;
 }
-
+.hamburger {
+    display: none;
+}
 
 
 .social-media a {
@@ -199,3 +201,33 @@ section {
     border-radius: 50%;
     padding: 1rem;
 }
+
+@media (max-width: 768px) {
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #1e0707;
+      width: 100%;
+      padding-right: 4rem;
+      text-align: end;
+      gap: 0;
+      display: none; /* Hide the menu by default */
+    }
+  
+    .navbar.show {
+      display: flex; /* Show the menu when toggled */
+    }
+  
+    .hamburger {
+      display: block; /* Show the hamburger menu on small screens */
+    }
+  
+    .dropdownMenu {
+      position: static;
+      display: block;
+      width: 100%;
+    }
+  }
