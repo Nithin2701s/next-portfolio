@@ -24,13 +24,13 @@ const About = () => {
     //   }
      },[])
     return(
-        <section className="about flex justify-center item-center space-x-[2rem] space-y-[1rem] bg-[#123846]" id="about">
-        <div className="about-img">
+        <section className="about flex justify-center item-center space-x-[2rem] space-y-[3rem] bg-[#123846]" id="about">
+        <div className="about-img my-[4rem]">
           <div className="rectangle w-[20vw] h-[60vh] ">
 
           </div>
         </div>
-        <div className="about-content">
+        <div className="about-content py-[5rem]">
           <h2 className="heading text-[3rem] font-[700]">About <span className="text-[#78b6e6]">Me</span></h2>
           <h3 className="text-[2rem] font-[700]">Frontend Developer</h3>
           <p className="text-[1rem]">
@@ -44,7 +44,7 @@ const About = () => {
             and a commitment to delivering reliable, scalable, and impactful
             software solutions.
           </p>
-          <a href="#" className="btn mt-[1rem] hover:shadow-none">Read more</a>
+
         </div>
       </section>
   
