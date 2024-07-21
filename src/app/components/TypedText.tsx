@@ -8,21 +8,21 @@ const TypedText: React.FC = () => {
   const typedInstance = useRef<Typed | null>(null);
 
   useEffect(() => {
-  //   if (typeof window !== 'undefined' && typedElement.current) {
-  //     typedInstance.current = new Typed(typedElement.current, {
-  //         strings: ['Frontend Developer', 'Web Developer', 'UI/UX Designer'],
-  //         typeSpeed: 70,
-  //         backSpeed: 70,
-  //         loop:true,
-  //         showCursor:false
-  //     });
-  // }
+    if (typeof window !== 'undefined' && typedElement.current) {
+      typedInstance.current = new Typed(typedElement.current, {
+          strings: ['Frontend Developer', 'Web Developer', 'UI/UX Designer'],
+          typeSpeed: 70,
+          backSpeed: 70,
+          loop:true,
+          showCursor:false
+      });
+  }
 
-  //   return () => {
-  //     if (typedInstance.current) {
-  //       typedInstance.current.destroy();
-  //   }
-  //   };
+    return () => {
+      if (typedInstance.current) {
+        typedInstance.current.destroy();
+    }
+    };
   }, []);
 
   return <span ref={typedElement} className='text-[#78b6e6]'></span>;
