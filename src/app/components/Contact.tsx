@@ -1,22 +1,24 @@
 "use client"
-import { useEffect } from 'react';
+import React,{ useEffect, useRef } from 'react';
 import '../style.css'
-import ScrollReveal from 'scrollreveal';
-const Contact = () => {
+const Contact:React.FC = () => {
+  const refToComponent = useRef(null)
     useEffect(()=>{
-      // if(typeof window !== undefined){ScrollReveal().reveal('.contact',{
-      //       origin:"left",
-      //       distance:"120px",
-      //       duration:2000,
-      //       delay:200
-      //   })}
-      //   return () =>{
-      //     if(typeof window !== undefined){
-      //     ScrollReveal().destroy();}
-      //   }
+         const animate = async()=>{
+          if(refToComponent.current){
+            const sr = (await (import('scrollreveal'))).default
+            sr().reveal(refToComponent.current,{
+              origin:'left',
+              distance:"80px",
+              duration:2000,
+              delay:200
+            })
+          }
+         }
+         animate()
     },[])
     return(
-        <section className="contact" id="contact">
+        <section className="contact" id="contact" ref={refToComponent}>
         <h2 className="heading mb-[3rem] text-[3rem] font-[700]">Contact <span className="text-[#78b6e6]">Me</span></h2>
   
         <form action="#" className="contact-form  mb-[3rem]">
