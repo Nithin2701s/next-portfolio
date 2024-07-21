@@ -14,7 +14,8 @@ html {
     overflow-x: hidden;
 }
 section {
-    padding: 9rem 9% 2rem; 
+    min-height: 100vh;
+    padding: 7rem 9% 2rem; 
 }
 .header {
     background-color: #000000;
