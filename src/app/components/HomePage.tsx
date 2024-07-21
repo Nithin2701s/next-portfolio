@@ -3,36 +3,36 @@ import Image from 'next/image';
 import '../style.css'
 // import TypedText from './TypedText';
 import { useEffect } from 'react';
-import ScrollReveal from 'scrollreveal';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 
 const TypedText = dynamic(() => import('./TypedText'), {
     ssr: false
 });
+
 const HomePage = () => {  
-     useEffect(() => {
-          // Initialize ScrollReveal
-          if(typeof window !== undefined){ScrollReveal().reveal('.home-content', {
-               origin : "right",
-               distance : "150px" ,
-               duration : 3000,
-               delay : 200
-          });
-        }
-          if(typeof window !== undefined){ScrollReveal().reveal('.home-img',{
-          origin :"bottom",
-          distance : "80px",
-          duration:2000,
-          delay : 200
-         })
-        }
-          // Clean up
-          return () =>{
-            if(typeof window !== undefined){
-            ScrollReveal().destroy();}
-          }
-        }, []);
+    //  useEffect(() => {
+    //       // Initialize ScrollReveal
+    //       if(typeof window !== undefined){ScrollReveal().reveal('.home-content', {
+    //            origin : "right",
+    //            distance : "150px" ,
+    //            duration : 3000,
+    //            delay : 200
+    //       });
+    //     }
+    //       if(typeof window !== undefined){ScrollReveal().reveal('.home-img',{
+    //       origin :"bottom",
+    //       distance : "80px",
+    //       duration:2000,
+    //       delay : 200
+    //      })
+    //     }
+    //       // Clean up
+    //       return () =>{
+    //         if(typeof window !== undefined){
+    //         ScrollReveal().destroy();}
+    //       }
+    //     }, []);
      return (
      <section className="home flex justify-center" id="home">
        <div className="home-img">   
