@@ -12,7 +12,7 @@ const TypedText = dynamic(() => import('./TypedText'), {
 const HomePage:React.FC = () => {  
      useEffect(() => {
           // Initialize ScrollReveal
-          if(typeof window !== undefined){
+          if(window !== undefined){
             ScrollReveal().reveal('.home-content', {
                origin : "right",
                distance : "150px" ,
