@@ -5,21 +5,35 @@ import '../style.css'
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-import ScrollReveal from 'scrollreveal';
 const TypedText = dynamic(() => import('./TypedText'), {
     ssr: false
 });
 const HomePage:React.FC = () => {  
+  const refToComponent = React.useRef(null)
      useEffect(() => {
-          // Initialize ScrollReveal
-          if(window !== undefined){
-            ScrollReveal().reveal('.home-content', {
-               origin : "right",
-               distance : "150px" ,
-               duration : 3000,
-               delay : 200
-          });
+
+      async function animate() {
+        if (refToComponent.current) {
+          const sr = (await import("scrollreveal")).default
+          sr().reveal(refToComponent.current,{
+            origin:"right",
+            distance:"80px",
+            duration:2000,
+            delay:200
+          })
         }
+      }
+      animate()
+
+          // Initialize ScrollReveal
+        //   if(typeof window !== undefined){
+        //     ScrollReveal().reveal('.home-content', {
+        //        origin : "right",
+        //        distance : "150px" ,
+        //        duration : 3000,
+        //        delay : 200
+        //   });
+        // }
     //       if(typeof window !== undefined){ScrollReveal().reveal('.home-img',{
     //       origin :"bottom",
     //       distance : "80px",
@@ -36,7 +50,7 @@ const HomePage:React.FC = () => {
         }, []);
      return (
      <section className="home flex justify-center" id="home">
-       <div className="home-img">   
+       <div className="home-img" ref={refToComponent}>   
        <Image src = '/Images/DP.jpg' alt='' width={400} height={80} className='DP opacity-[0.8]'></Image>  
        </div> 
        <div className="home-content mt-[2rem]">
