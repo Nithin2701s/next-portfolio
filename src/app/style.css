@@ -266,7 +266,7 @@ section {
     }
   }
 
-  @media (max-width:572px){
+  @media (max-width:576px){
     .home {
        flex-direction: column;
     }
