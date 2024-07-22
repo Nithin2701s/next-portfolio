@@ -16,6 +16,7 @@ html {
 section {
     min-height: 100vh;
     padding: 7rem 9% 2rem; 
+    overflow-x: hidden;
 }
 .header {
     background-color: #000000;
@@ -87,7 +88,6 @@ section {
   
   .services-container .services-box {
       flex: 1 1 10rem;
-      
       padding: 1rem .5rem 1.5rem;
       border-radius: 2rem;
       text-align: center;
@@ -202,6 +202,27 @@ section {
     padding: 1rem;
 }
 
+
+@media (max-width:1060px){
+    .home-content h3 {
+         font-size: 1.5rem;
+    }
+    .home-content h1 {
+        font-size: 2rem;
+    }
+   .home-content p {
+    font-size: .7rem;
+   }
+   .social-media a {
+    height: 2.2rem;
+    width: 2.2rem;
+    font-size: 1rem;
+   }
+ .btn {
+   font-size: 1rem;
+}
+}
+
 @media (max-width: 768px) {
     .navbar {
       display: flex;
@@ -229,5 +250,24 @@ section {
       position: static;
       display: block;
       width: 100%;
+    }
+  }
+
+  @media (max-width:572px){
+    .home {
+        display: block;
+    }
+    .home-img {
+        width: 20rem;
+        justify-self: center;
+    }
+    .about {
+        display: block;
+    }
+    .about-img {
+        display: none;
+    }
+    .about-content {
+        order: 1;
     }
   }
