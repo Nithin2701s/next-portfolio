@@ -60,7 +60,8 @@ const Skills = () => {
 
         if (refToComponent6.current) {
           sr().reveal(refToComponent6.current, {
-            scale: 0.7,
+            rotate: { x: 0, y: 0, z: 90 },
+            scale: 0.5,
             duration: 2000,
             delay: 200,
           });
