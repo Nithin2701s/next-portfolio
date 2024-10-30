@@ -43,7 +43,7 @@ const About: React.FC = () => {
             solutions to complex problems. With a keen eye for detail and a
             dedication to continuous learning, I strive to create efficient and
             user-centric software that meets the highest standards of quality. My
-            experience in [specific technologies or domains] has equipped me with
+            experience in Java, Python and MERN has equipped me with
             the skills to tackle diverse challenges and contribute effectively to
             innovative projects. I am driven by a curiosity for new technologies
             and a commitment to delivering reliable, scalable, and impactful
