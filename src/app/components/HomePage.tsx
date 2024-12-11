@@ -56,7 +56,7 @@ const HomePage:React.FC = () => {
           <Link href="https://x.com/Itz__Nithin" className='media'><i className="fa-brands fa-x-twitter"></i></Link>
           <Link href="https://www.instagram.com/nithin__cns" className='media'><i className="fa-brands fa-instagram"></i></Link>
         </div>
-          <Link href="https://drive.google.com/file/d/1H1IR5LTM-tfgikggViBHeKP9F2ttjw2C/view?usp=drive_link" className="btn ml-[4rem] my-[1rem] hover:shadow-none">Download CV</Link>
+          <Link href="https://drive.google.com/file/d/1D8FoBBe7hGzQClGHhP1lLwjjHD2wrjhn/view?usp=drivesdk" className="btn ml-[4rem] my-[1rem] hover:shadow-none">Download CV</Link>
        
       </div>
     
